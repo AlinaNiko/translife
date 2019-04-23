@@ -1,0 +1,121 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.main-content__calculator {
+  padding: 89px 0;
+}
+
+.calculator__container {
+  justify-content: space-between;
+}
+
+.calculator__text,
+.calculator__form {
+  width: calc((100% - 100px) / 2);
+  min-width: 375px;
+  @include breakpoint (lg) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media (max-width: 789px) {
+    width: 100%;
+  }
+}
+
+.calculator__title {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 56px;
+  @media (max-width: 789px) {
+    text-align: center;
+  }
+  @include breakpoint (sm) {
+    margin-top: 0;
+    font-size: 38px;
+  }
+}
+
+.calculator__title--small {
+  display: block;
+  margin-top: -10px;
+  font-size: 28px;
+  @include breakpoint (sm) {
+    font-size: 18px;
+  }
+}
+
+.calculator__paragraph {
+  margin-top: 30px;
+  font-size: 30px;
+  @media (max-width: 789px) {
+    text-align: center;
+  }
+  @include breakpoint (sm) {
+    margin-top: 20px;
+    font-size: 21px;
+  }
+}
+
+.calculator__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media (max-width: 789px) {
+    margin-top: 30px;
+  }
+}
+
+.calculator__item--point-a,
+.calculator__item--point-b {
+  width: 100%;
+}
+
+.calculator__item--weight,
+.calculator__item--transport {
+  width: calc((100% - 20px) / 2);
+}
+
+.calculator__field {
+  width: 100%;
+  //min-height: 64px;
+  padding: 21px 10px 21px 79px;
+  font-size: 18px;
+  border: 1px solid #dadada;
+  background-color: $white; 
+  @include placeholder {
+    font-size: 18px;
+    color: #6f6f6f;
+    @include breakpoint (sm) {
+      font-size: 16px;
+    }
+  } 
+  @include placeholderHidden;
+  @include breakpoint (sm) {
+    font-size: 16px;
+  }
+}
+
+.calculator__item:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.calculator__button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.calculator__field--point-a {
+  background: url("../images/point-a.png") left 27px center no-repeat;
+}
+
+.calculator__field--point-b {
+  background: url("../images/point-b.png") left 27px center no-repeat;
+}
+
+.calculator__field--weight {
+  background: url("../images/weight.png") left 27px center no-repeat;
+}
+
+.calculator__field--transport {
+  background: url("../images/transport.png") left 27px center no-repeat;
+}
