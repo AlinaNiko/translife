@@ -1,0 +1,50 @@
+@import 'variables';
+@import 'mixins';
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: $commonWidth;
+  margin: 0 auto;
+  padding: 0 $gutter;
+  width: 100%;
+  /*@include breakpoint(el) {
+    max-width: 992px;
+  }
+  @include breakpoint(lg) {
+    max-width: 768px;
+  }
+  @include breakpoint(md) {
+    max-width: 576px;
+  }
+  @include breakpoint(sm) {
+    max-width: 480px;
+  }*/
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(0,0,0,0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.button {
+  min-width: 260px;
+  padding: 15px;
+  font-weight: 400;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $mainBlue;
+  transition: background-color .3s ease-out;
+  &:hover {
+    background-color: $darkBlue;
+  }
+}

@@ -1,0 +1,11 @@
+// Common styles
+@import 'styles/common/normalize';
+@import 'styles/common/fonts';
+@import 'styles/common/common';
+
+// Helpers
+@import 'styles/helpers/mixs';
+
+// Blocks
+@import 'styles/blocks/_main-header.scss';
+@import 'styles/blocks/_main-footer.scss';

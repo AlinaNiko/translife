@@ -1,0 +1,50 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+@font-face {
+    font-family: 'ProximaNova';
+    font-display: swap;
+    src: local('ProximaNova-Regular'), url($fontDir + 'ProximaNova/ProximaNova-Regular.woff2') format('woff2'), url($fontDir + 'ProximaNova/ProximaNova-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    font-display: swap;
+    src: local('ProximaNova-RegularIt'), url($fontDir + 'ProximaNova/ProximaNova-RegularIt.woff2') format('woff2'), url($fontDir + 'ProximaNova/ProximaNova-RegularIt.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    font-display: swap;
+    src: local('ProximaNovaT-Thin'), url($fontDir + 'ProximaNova/ProximaNovaT-Thin.woff2') format('woff2'), url($fontDir + 'ProximaNova/ProximaNovaT-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    font-display: swap;
+    src: local('ProximaNova-Semibold'), url($fontDir + 'ProximaNova/ProximaNova-Semibold.woff2') format('woff2'), url($fontDir + 'ProximaNova/ProximaNova-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    font-display: swap;
+    src: local('ProximaNova-Bold'), url($fontDir + 'ProximaNova/ProximaNova-Bold.woff2') format('woff2'), url($fontDir + 'ProximaNova/ProximaNova-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    font-display: swap;
+    src: local('ProximaNova-Black'), url($fontDir + 'ProximaNova/ProximaNova-Black.woff2') format('woff2'), url($fontDir + 'ProximaNova/ProximaNova-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
