@@ -19,6 +19,7 @@
   }
   @media (max-width: 789px) {
     width: 100%;
+    min-width: 260px;
   }
 }
 
@@ -27,10 +28,10 @@
   font-weight: 400;
   font-size: 56px;
   @media (max-width: 789px) {
+    margin-top: 0;
     text-align: center;
   }
-  @include breakpoint (sm) {
-    margin-top: 0;
+  @include breakpoint (sm) {    
     font-size: 38px;
   }
 }
@@ -40,6 +41,7 @@
   margin-top: -10px;
   font-size: 28px;
   @include breakpoint (sm) {
+    margin-top: -5px;
     font-size: 18px;
   }
 }
@@ -48,10 +50,10 @@
   margin-top: 30px;
   font-size: 30px;
   @media (max-width: 789px) {
+    margin-top: 20px;
     text-align: center;
   }
-  @include breakpoint (sm) {
-    margin-top: 20px;
+  @include breakpoint (sm) {    
     font-size: 21px;
   }
 }
@@ -73,6 +75,9 @@
 .calculator__item--weight,
 .calculator__item--transport {
   width: calc((100% - 20px) / 2);
+  @include breakpoint (sm) {
+    width: 100%;
+  }
 }
 
 .calculator__field {
@@ -102,6 +107,9 @@
 .calculator__button {
   width: 100%;
   margin-top: 20px;
+  @include breakpoint (sm) {
+    font-size: 16px;
+  }
 }
 
 .calculator__field--point-a {

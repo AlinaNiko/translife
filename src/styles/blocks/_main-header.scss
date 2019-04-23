@@ -41,6 +41,14 @@
   @media (max-width: 729px) {
     margin-bottom: 20px;
   }
+  @include breakpoint (sm) {
+    width: 200px;
+  }
+}
+
+.top-bar__logo-image {
+  width: 100%;
+  height: auto;
 }
 
 .navigation {
@@ -176,6 +184,10 @@
   @media (max-width: 729px) {
     margin-left: 0;
   }
+  @include breakpoint (sm) {
+    font-size: 18px;
+    text-align: right;
+  }
 }
 
 .top-bar__phone-link {
@@ -188,6 +200,9 @@
 .top-bar__phone-text {
   display: block;
   font-size: 15px;
+  @include breakpoint (sm) {
+    font-size: 12px;
+  }
 }
 
 
