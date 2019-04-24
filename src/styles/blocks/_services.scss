@@ -1,0 +1,110 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.services {
+  padding: 100px 0 56px;
+  background-color: $lightGrey;
+  @include breakpoint (md) {
+    padding: 70px 0 56px;
+  }
+}
+
+.services__container {
+  justify-content: space-between;
+}
+
+.services__wrapper {
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: space-between;
+  width: calc((100% - 20px) / 2);
+  min-width: 260px;
+  min-height: 200px;
+  margin-bottom: 20px;
+  padding: 40px 120px 40px 50px;
+  background-color: $white;
+  vertical-align: middle;
+  @media (max-width: 1080px) {
+    padding: 30px;
+  }
+  @media (max-width: 933px) {
+    min-height: 150px;
+  }
+  @include breakpoint (md) {
+    width: 100%;
+  }
+}
+
+.services__wrapper--main {
+  padding: 20px 50px;
+  background-color: $lightGrey;
+  @media (max-width: 1080px) {
+    padding: 10px 30px;
+  }
+  @include breakpoint (md) {
+    min-height: 100px;
+    font-size: 56px;
+    text-align: center;
+  }
+}
+
+.services__title {
+  font-weight: 400;
+  font-size: 72px;
+  @media (max-width: 933px) {
+    font-size: 64px;
+  }
+  @include breakpoint (md) {
+    font-size: 56px;
+    text-align: center;
+  }
+  @include breakpoint (sm) {
+    font-size: 38px;
+  }
+}
+
+.services__paragraph {
+  font-size: 36px;
+  @media (max-width: 933px) {
+    font-size: 28px;
+  }
+  @include breakpoint (md) {
+    text-align: center;
+  }
+  @include breakpoint (sm) {
+    font-size: 18px;
+  }
+}
+
+.services__subtitle {
+  font-weight: 400;
+  font-size: 30px;
+  @media (max-width: 933px) {
+    font-size: 21px;
+  }
+  @include breakpoint (sm) {
+    font-size: 18px;
+  }
+}
+
+.services__text {
+  margin-top: 20px;
+  font-size: 18px;
+  @media (max-width: 933px) {
+    font-size: 16px;
+  }
+  @include breakpoint (sm) {
+    font-size: 14px;
+  }
+}
+
+.services__button {
+  margin: 30px auto 0;
+  padding: 15px 155px;
+  @include breakpoint (md) {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;    
+  }
+}
