@@ -1,0 +1,73 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.about {
+  max-width: 797px;
+  padding: 100px 20px;  
+  margin: 0 auto;
+  @include breakpoint (sm) {
+    padding: 70px 20px;
+  }
+}
+
+.about__title {
+  width: 100%;
+  font-weight: 400;
+  font-size: 42px;
+  text-align: center;
+  @include breakpoint (md) {
+    font-size: 32px;
+  }
+}
+
+.about__paragraph {
+  width: 100%;
+  margin-top: 35px;
+  font-size: 18px;
+  text-align: justify;
+  @include breakpoint (md) {
+    font-size: 16px;
+  }
+}
+
+.about__list {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  @include breakpoint (sm) {
+    margin-top: 30px;
+  }
+  @media (max-width: 370px) {
+    flex-direction: column;
+  }
+}
+
+.about__item:first-of-type {
+  margin-right: 146px;
+  @include breakpoint (sm) {
+    margin-right: 70px;
+  }
+  @media (max-width: 370px) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.about__item-text {
+  font-size: 48px;
+  text-align: center;
+  @include breakpoint (md) {
+    font-size: 32px;
+  }
+}
+
+.about__item-text--small {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  @include breakpoint (md) {
+    font-size: 14px;
+  }
+}
