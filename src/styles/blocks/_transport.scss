@@ -1,2 +1,81 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
+
+
+.transport {
+  padding: 20px 0 140px;
+}
+
+.transport__title {
+  width: 100%;
+  font-weight: 400;
+  font-size: 42px;
+  text-align: center;
+}
+
+.transport__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.transport__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  @media (max-width: 1038px) {
+    justify-content: space-around;
+  }
+  @media (max-width: 859px) {
+    justify-content: space-between;
+  }
+}
+
+.transport__item:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+
+.transport__image-wrapper {
+  min-width: 247px;
+}
+
+.transport__capacity-image-wrapper {
+  min-width: 221px;
+}
+
+.transport__description {
+}
+
+.transport__capacity {
+  max-width: 135px;
+}
+
+.transport__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.transport__sublist,
+.transport__capacity {
+  font-size: 14px;
+}
+
+.transport__button {
+  align-self: center;
+  padding: 15px 45px;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px solid $darkBlue;
+  background-color: $white;
+  transition: background-color .3s ease-out;
+  &:hover {
+    background-color: $darkBlue;
+    color: $white;
+  }
+  
+}
+
+

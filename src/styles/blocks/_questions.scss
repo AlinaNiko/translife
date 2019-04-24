@@ -1,0 +1,51 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.questions {
+  padding: 104px 0 72px;
+  background-color: #e0e0e0;
+  @include breakpoint (md) {
+    padding: 50px 0;
+  }
+  @include breakpoint (sm) {
+    padding: 30px 0;
+  }
+}
+
+.questions__container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.questions__paragraph {
+  font-size: 48px;
+  @media (max-width: 1000px) {
+    width: 100%;
+    text-align: center;
+  }
+  @include breakpoint (md) {
+    font-size: 32px;
+  }
+  @include breakpoint (sm) {
+    font-size: 21px;
+  }
+}
+
+.questions__phone-number {
+  font-size: 60px;
+  color: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 1000px) {
+    width: 100%;
+    text-align: center;
+  }
+  @include breakpoint (md) {
+    font-size: 48px;
+  }
+  @include breakpoint (sm) {
+    font-size: 32px;
+  }
+}
