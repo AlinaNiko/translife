@@ -3,11 +3,10 @@
 
 
 .about {
-  max-width: 797px;
-  padding: 100px 20px;  
-  margin: 0 auto;
+  padding: 100px 0;  
+  
   @include breakpoint (sm) {
-    padding: 70px 20px;
+    padding: 70px 0;
   }
 }
 
@@ -23,7 +22,9 @@
 
 .about__paragraph {
   width: 100%;
-  margin-top: 35px;
+  max-width: 797px;
+  margin: 25px auto 0;
+  //margin-top: 35px;
   font-size: 18px;
   text-align: justify;
   @include breakpoint (md) {
@@ -34,7 +35,9 @@
 .about__list {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
+  max-width: 797px;
+  margin: 60px auto 0;
+  //margin-top: 60px;
   @include breakpoint (sm) {
     margin-top: 30px;
   }

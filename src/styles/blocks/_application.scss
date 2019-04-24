@@ -1,0 +1,104 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.application {
+  padding: 145px 0;
+  @media (max-width: 600px) {
+    padding: 70px 0;
+  }  
+}
+
+.application__container {
+  flex-direction: column;
+  
+}
+
+.application__paragraph {
+  font-size: 42px;
+  text-align: center;
+  @include breakpoint (lg) {
+    font-size: 32px;
+  }
+  @media (max-width: 600px) {
+    font-size: 28px;
+  }
+  @media (max-width: 370px) {
+    font-size: 24px;
+  }
+}
+
+.application__paragraph--small {
+  display: block;
+  font-size: 34px;
+  text-align: center;
+  @include breakpoint (lg) {
+    font-size: 24px;
+  }
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
+  @media (max-width: 370px) {
+    font-size: 16px;
+  }
+}
+
+.application__text {
+  margin-top: 20px;
+}
+
+.application__link {
+  display: block;
+  margin: 10px auto 0;
+  font-size: 100px;
+  color: inherit;
+  @include breakpoint (lg) {
+    font-size: 72px;
+  }
+  @media (max-width: 600px) {
+    font-size: 42px;
+  }
+  @media (max-width: 370px) {
+    font-size: 32px;
+  }
+}
+
+.application__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 520px;
+  margin: 43px auto 0;
+}
+
+.application__item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.application__field {
+  width: 100%;
+  padding: 21px 10px 21px 79px;
+  font-size: 18px;
+  border: 1px solid #dadada;
+  background-color: $white; 
+  @include placeholder {
+    font-size: 18px;
+    color: #6f6f6f;
+    @include breakpoint (sm) {
+      font-size: 16px;
+    }
+  } 
+  @include placeholderHidden;
+  @include breakpoint (sm) {
+    font-size: 16px;
+  }
+}
+
+.application__field--user {
+  background: $white url("../images/user.png") left 27px center no-repeat;
+}
+
+.application__field--phone {
+  background: $white url("../images/phone.png") left 27px center no-repeat;
+}
