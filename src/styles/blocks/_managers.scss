@@ -1,0 +1,141 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.managers {
+  padding: 100px 0 90px;
+  background-color: $lightGrey;
+  @include breakpoint (sm) {
+    padding: 70px 0;
+  }
+}
+
+.managers__container {
+  flex-direction: column;
+}
+
+.managers__title {
+  width: 100%;
+  font-weight: 400;
+  font-size: 42px;
+  text-align: center;
+  @include breakpoint (md) {
+    font-size: 32px;
+  }
+}
+
+.managers__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 77px;
+  @include breakpoint (el) {
+    justify-content: space-around;
+  }
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.manager {
+  width: calc((100% - 150px ) / 4);
+  min-width: 260px;
+  @include breakpoint (el) {
+    width: calc((100% - 50px ) / 2);
+    margin-bottom: 30px;
+  }
+}
+
+.manager__image-wrapper {
+  text-align: center;
+}
+
+.manager__name,
+.manager__contacts {
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  @include breakpoint (md) {
+    font-size: 21px;
+  }
+}
+
+.manager__name {
+  margin-top: 15px;
+}
+
+.manager__contacts-phone {
+  display: block;
+  color: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.manager__contacts-viber {
+  margin-top: 15px;
+  margin-right: 23px;
+  display: inline-block;
+  width: 49px;
+  height: 51px;
+  background: url("../images/css_sprites.png") -10px -10px no-repeat; 
+}
+
+.manager__contacts-telegram {
+  margin-top: 15px;
+  display: inline-block;
+  width: 49px;
+  height: 51px;
+  background: url("../images/css_sprites.png") -79px -10px no-repeat; 
+}
+
+.managers__paragraph {
+  max-width: 514px;
+  margin: 55px auto 0;
+  font-size: 24px; 
+  text-align: center;
+  @include breakpoint (el) {
+    margin: 25px auto 0;
+  }
+  @include breakpoint (md) {
+    font-size: 21px;
+  }
+}
+
+.managers__form {
+  width: 100%;
+  max-width: 514px;  
+  margin: 33px auto 0;
+  font-size: 18px; 
+}
+
+.managers__field-wrapper {
+  width: 100%;
+}
+
+.managers__field {
+  width: 100%;
+  padding: 21px 10px 21px 79px;
+  font-size: 18px;
+  border: 1px solid #dadada;
+  background: $white url("../images/phone.png") left 27px center no-repeat; 
+  @include placeholder {
+    font-size: 18px;
+    color: #6f6f6f;
+    @include breakpoint (sm) {
+      font-size: 16px;
+    }
+  } 
+  @include placeholderHidden;
+  @include breakpoint (sm) {
+    font-size: 16px;
+  }
+}
+
+.managers__button {
+  margin-top: 25px;
+  width: 100%;
+}
