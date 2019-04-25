@@ -7,14 +7,30 @@
 @import 'styles/helpers/mixs';
 
 // Blocks
-@import 'styles/blocks/_main-header.scss';
+@import 'styles/blocks/main-header';
+@import 'styles/blocks/navigation';
+@import 'styles/blocks/banner';
+@import 'styles/blocks/top-bar';
+
 @import 'styles/blocks/calculator';
 @import 'styles/blocks/transport';
 @import 'styles/blocks/questions';
+
 @import 'styles/blocks/managers';
+@import 'styles/blocks/manager';
+
 @import 'styles/blocks/about';
 @import 'styles/blocks/services';
 @import 'styles/blocks/video-block';
 @import 'styles/blocks/application';
-@import 'styles/blocks/_main-footer.scss';
+
+@import 'styles/blocks/main-footer';
+@import 'styles/blocks/contacts';
+@import 'styles/blocks/bottom-bar';
+@import 'styles/blocks/social';
+
 @import 'styles/blocks/modals';
+@import 'styles/blocks/close-button';
+@import 'styles/blocks/add-info';
+@import 'styles/blocks/popup-request';
+@import 'styles/blocks/popup-calculator';

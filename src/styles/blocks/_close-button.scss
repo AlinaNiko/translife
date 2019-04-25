@@ -1,0 +1,38 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+ 
+.close-button {
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  z-index: 30;
+  &::before,
+  &::after {
+    @include pseudo();
+    width: 3px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: $white;
+    transition: background-color .3s ease-out; 
+    z-index: 30;  
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+  &:hover::before,
+  &:hover::after {
+    background-color: $mainBlue;
+  }
+  @include breakpoint (md) {
+    top: 10px;
+    right: 30px;
+    &::before,
+    &::after {
+      background-color: $darkBlue;
+    }
+  }
+}

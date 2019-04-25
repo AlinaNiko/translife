@@ -1,0 +1,85 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.popup-request--opened {
+  display: block;
+}
+.popup-request--closed {
+  display: none;
+} 
+
+.popup-request__cost {
+  font-size: 24px;
+  @include breakpoint (md) {
+    font-size: 21px;
+    text-align: center;
+  }
+}
+
+.popup-request__cost--big {
+  display: block;
+  font-size: 64px;
+  @include breakpoint (md) {
+    font-size: 48px;
+  }
+  @include breakpoint (sm) {
+    font-size: 32px;
+  }
+}
+
+.popup-request__paragraph {
+  margin-top: 10px;
+  font-size: 28px;
+  @include breakpoint (md) {
+    font-size: 21px;
+    text-align: center;
+  }
+  @include breakpoint (sm) {
+    font-size: 18px;
+  }
+}
+
+
+.popup-request__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 520px;
+  margin-top: 35px;
+  @include breakpoint (sm) {
+    margin-top: 20px;
+  }
+}
+
+.popup-request__item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.popup-request__field {
+  width: 100%;
+  padding: 21px 10px 21px 79px;
+  font-size: 18px;
+  border: 1px solid #dadada;
+  background-color: $white; 
+  @include placeholder {
+    font-size: 18px;
+    color: #6f6f6f;
+    @include breakpoint (sm) {
+      font-size: 16px;
+    }
+  } 
+  @include placeholderHidden;
+  @include breakpoint (sm) {
+    font-size: 16px;
+  }
+}
+
+.popup-request__field--user {
+  background: $white url("../images/user.png") left 27px center no-repeat;
+}
+
+.popup-request__field--phone {
+  background: $white url("../images/phone.png") left 27px center no-repeat;
+}

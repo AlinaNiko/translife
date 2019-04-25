@@ -1,0 +1,55 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.manager {
+  width: calc((100% - 150px ) / 4);
+  min-width: 260px;
+  @include breakpoint (el) {
+    width: calc((100% - 50px ) / 2);
+    margin-bottom: 30px;
+  }
+}
+ 
+.manager__image-wrapper {
+  text-align: center;
+}
+
+.manager__name,
+.manager__contacts {
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  @include breakpoint (md) {
+    font-size: 21px;
+  }
+}
+
+.manager__name {
+  margin-top: 15px;
+}
+
+.manager__contacts-phone {
+  display: block;
+  color: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.manager__contacts-viber {
+  margin-top: 15px;
+  margin-right: 23px;
+  display: inline-block;
+  width: 49px;
+  height: 51px;
+  background: url("../images/css_sprites.png") -10px -10px no-repeat; 
+}
+
+.manager__contacts-telegram {
+  margin-top: 15px;
+  display: inline-block;
+  width: 49px;
+  height: 51px;
+  background: url("../images/css_sprites.png") -79px -10px no-repeat; 
+}

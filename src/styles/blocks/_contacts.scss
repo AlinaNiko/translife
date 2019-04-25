@@ -1,0 +1,51 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.contacts__adress {
+  font-size: 22px;
+  @media (max-width: 933px) {
+    font-size: 18px; 
+  }
+  @include breakpoint (sm) {
+    font-size: 16px;
+  }
+}
+
+.contacts__list {
+  margin-top: 15px;
+  font-size: 16px;
+  @include breakpoint (sm) {
+    font-size: 14px;
+  }
+}
+
+.contacts__links {
+  margin-top: 15px;
+}
+
+.contacts__link-subtitle {
+  font-size: 16px;
+  @include breakpoint (sm) {
+    font-size: 14px;
+  }
+}
+
+.contacts__link-subtitle {
+  margin-top: 10px;
+}
+
+.contacts__link {
+  display: block;
+  font-size: 24px;
+  color: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 933px) {
+    font-size: 21px;
+  }
+  @include breakpoint (sm) {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,13 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+ 
+.add-info {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #979797;
+  @include breakpoint (sm) {
+    font-size: 16px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,95 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.popup-calculator--opened {
+  display: block;
+}
+
+.popup-calculator--closed {
+  display: none;
+} 
+
+.popup-calculator__title {
+  font-weight: 400;
+  font-size: 42px;
+  @include breakpoint (md) {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+.popup-calculator__title--small {
+  display: block;
+  font-size: 28px;
+  @include breakpoint (md) {
+    font-size: 21px;
+  }
+}
+
+.popup-calculator__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  @include breakpoint (sm) {
+    margin-top: 20px;
+  }
+}
+
+.popup-calculator__item--point-a,
+.popup-calculator__item--point-b {
+  width: 100%;
+}
+
+.popup-calculator__item--weight,
+.popup-calculator__item--transport {
+  width: calc((100% - 20px) / 2);
+  @include breakpoint (sm) {
+    width: 100%;
+  }
+}
+
+.popup-calculator__field {
+  width: 100%;
+  padding: 21px 10px 21px 79px;
+  font-size: 18px;
+  border: 1px solid #dadada;
+  background-color: $white; 
+  @include placeholder {
+    font-size: 18px;
+    color: #6f6f6f;
+    @include breakpoint (sm) {
+      font-size: 16px;
+    }
+  } 
+  @include placeholderHidden;
+  @include breakpoint (sm) {
+    font-size: 16px;
+  }
+}
+
+.popup-calculator__item:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.popup-calculator__button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.popup-calculator__field--point-a {
+  background: $white url("../images/point-a.png") left 27px center no-repeat;
+}
+
+.popup-calculator__field--point-b {
+  background: $white url("../images/point-b.png") left 27px center no-repeat;
+}
+
+.popup-calculator__field--weight {
+  background: $white url("../images/weight.png") left 27px center no-repeat;
+}
+
+.popup-calculator__field--transport {
+  background: $white url("../images/transport.png") left 27px center no-repeat;
+}

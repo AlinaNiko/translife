@@ -1,0 +1,132 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.navigation {
+  margin-left: auto;
+  position: relative;
+  margin-top: 16px;
+  @media (max-width: 729px) {
+    order: 1;
+  }
+  @media (max-width: 729px) {
+    margin-left: 0;
+    margin-top: 20px; 
+  }
+}
+
+.navigation__button {
+  display: none;
+  min-width: 150px;
+  min-height: 20px;
+  padding-right: 50px;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: right;
+  color: $white;
+  @include breakpoint(lg) {
+    display: block;
+  }
+}
+
+.navigation--opened .navigation__button {
+  text-align:  left;
+  color: $mainBlue;
+  margin-bottom: 10px;
+}
+
+.navigation__button::after {
+  @include pseudo();
+  top: -2px;
+  right: 0;
+  width: 30px;
+  height: 4px;
+  background-color: $white;
+  box-shadow: 0 8px 0 0 $white, 0 16px 0 0 $white;
+}
+
+.navigation--opened {
+  @include breakpoint(lg) {
+    margin-top: 0;
+    padding: 20px 45px 20px 20px;
+    background-color:  rgba(0,0,0,.3);
+  } 
+  @media (max-width: 729px) {
+    margin-top: 20px; 
+  }
+}
+
+.navigation--opened .navigation__button {
+  &::before,
+  &::after {
+    @include pseudo();
+    top: 23px;
+    right: 10px;
+    width: 30px;
+    height: 4px;
+    background-color: $mainBlue;
+    box-shadow: none;
+    transition: background-color .3s ease-out;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+  &:hover::before,
+  &:hover::after {
+    background-color: $white;
+  }
+}
+
+.navigation--closed .navigation__item {
+  @include breakpoint (lg) {
+    display: none;
+  }
+}
+
+.navigation--closed .navigation__menu {
+  @media (max-width: 729px) {
+    display: none;
+  }
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $white;
+  @include breakpoint(lg) {
+    flex-direction: column;
+  }
+}
+
+.navigation__item {
+  margin-right: 20px;
+  @include breakpoint(lg) {
+    margin-right: 0;
+  }
+}
+
+.navigation--opened .navigation__item {
+  @include breakpoint(lg) {
+    padding: 10px 10px 10px 0;
+    border-top: 0.3px solid rgba(255,255,255,.5);
+  }
+}
+
+.navigation--opened .navigation__item:last-of-type {
+  @include breakpoint(lg) {
+    border-bottom: 0.3px solid rgba(255,255,255,.5);
+  }
+}
+
+.navigation__link {
+  color: inherit;
+  transition: color .3s ease-out;
+  &:hover {
+    color: $mainBlue;
+  }
+}

@@ -1,0 +1,35 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+.social {
+  margin-top: 20px;
+  align-self: flex-start;
+  @include breakpoint (md) {
+    align-self: center;
+  }
+}
+
+.social__link {
+  display: inline-block;
+  background: url('../images/css_sprites.png') no-repeat;
+}
+
+.social__link--twitter {  
+  width: 16px;
+  height: 14px;
+  background-position: -10px -81px;
+  &:hover {
+    background-position: -46px -81px;
+  }
+}
+
+.social__link--facebook {
+  margin-left: 20px;
+  width: 8px;
+  height: 17px;
+  background-position: -145px -10px;
+  &:hover {
+    background-position: -145px -47px;
+  }
+}
