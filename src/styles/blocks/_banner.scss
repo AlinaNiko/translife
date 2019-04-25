@@ -23,7 +23,6 @@
     font-size: 68px;
   }
   @include breakpoint(sm) {
-    margin-top: 70px;
     font-size: 48px;    
     text-align: center;
   } 
