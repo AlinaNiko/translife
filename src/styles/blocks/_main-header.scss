@@ -67,6 +67,7 @@
 .navigation__button {
   display: none;
   min-width: 150px;
+  min-height: 20px;
   padding-right: 50px;
   font-size: 16px;
   text-transform: uppercase;
@@ -130,6 +131,12 @@
 
 .navigation--closed .navigation__item {
   @include breakpoint (lg) {
+    display: none;
+  }
+}
+
+.navigation--closed .navigation__menu {
+  @media (max-width: 729px) {
     display: none;
   }
 }
