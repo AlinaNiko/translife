@@ -1,0 +1,27 @@
+<div class="modals">
+  <section class="modals__popup popup-calculator popup-calculator--closed">
+    <h2 class="popup-calculator__title"> Рассчитайте стоимость <span class="popup-calculator__title--small">перевозки онлайн</span></h2>
+    <form class="popup-calculator__form" action="#">
+        <label class="popup-calculator__item popup-calculator__item--point-a"> <span class="popup-calculator__subtitle visually-hidden">Точка загрузки</span><input class="popup-calculator__field calculator__field--point-a" type="text" name="point-a" placeholder="Точка загрузки"></label>
+        <label class="popup-calculator__item popup-calculator__item--point-b"> <span class="popup-calculator__subtitle visually-hidden">Точка выгрузки</span><input class="popup-calculator__field calculator__field--point-b" type="text" name="point-b" placeholder="Точка выгрузки"></label>
+        <label class="popup-calculator__item popup-calculator__item--weight"> <span class="popup-calculator__subtitle visually-hidden">Вес</span><input class="popup-calculator__field calculator__field--weight" type="text" name="weight" placeholder="Вес"></label>
+        <label class="popup-calculator__item popup-calculator__item--transport"> <span class="popup-calculator__subtitle visually-hidden">Транспорт</span><input class="popup-calculator__field calculator__field--transport" type="text" name="transport" placeholder="Транспорт"></label>
+        <button class="popup-calculator__button button" type="submit">Рассчитать стоимость</button>
+      </form>
+      <p class="popup-calculator__add-info add-info">Любой транспорт от 1 до 20 тонн, в&nbsp;том&nbsp;числе негабаритная перевозка грузов.</p>
+      <button class="popup-calculator__close-button close-button"><span class="close-button-text visually-hidden">Закрыть</span></button>
+  </section>
+  <section class="modals__popup popup-request popup-request--opened">
+    <h2 class="popup-request__title visually-hidden">Форма заявки</h2>
+    <p class="popup-request__cost">Примерная стоимость <span class="popup-request__cost--big">35,000 р.</span></p>
+    <p class="popup-request__paragraph">Оставьте заявку, мы свяжемся с&nbsp;Вами в&nbsp;ближайшее время</p>
+    <form class="popup-request__form" action="#">
+      <label class="popup-request__item"> <span class="popup-request__subtitle visually-hidden">Ваше имя</span> <input class="popup-request__field popup-request__field--user" type="text" name="name" placeholder="Имя"> </label>
+      <label class="popup-request__item"> <span class="popup-request__subtitle visually-hidden">Ваше телефон</span> <input class="popup-request__field popup-request__field--phone" type="tel" name="phone-number" placeholder="Телефон"> </label>
+      <button class="popup-request__button button" type="submit">Оставить заявку</button>
+    </form>  
+    <p class="popup-request__add-info add-info">Любой транспорт от 1 до 20 тонн, в&nbsp;том&nbsp;числе негабаритная перевозка грузов.</p>
+    <button class="popup-request__close-button close-button"><span class="close-button-text visually-hidden">Закрыть</span></button>    
+  </section>
+  <div class="modals__overlay"></div>
+</div>
